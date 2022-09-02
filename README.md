@@ -1,0 +1,2 @@
+# Simple_Django_CRUD_api
+Simple_Django_CRUD_api
