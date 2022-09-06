@@ -4,6 +4,8 @@ from .serializers import ItemSerializer
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from rest_framework import serializers, status
+from django.shortcuts import get_object_or_404
+
 
 
 @api_view(['POST'])
@@ -48,4 +50,11 @@ def update_items(request, pk):
 
     else:
         return Response(status=status.HTTP_404_NOT_FOUND)
+
+
+@api_view(['DELETE'])
+def delete_items(request, pk):
+    record = get_object_or_404(Items, pk=pk)
+    record.delete()
+    return Response(status=status.HTTP_202_ACCEPTED)
 
