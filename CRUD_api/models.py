@@ -1,6 +1,11 @@
-from django.db import models
+import uuid
 
-class Items(models.Model):
+from django.db import models
+from .commen_models import CommonFields
+
+
+
+class Items(CommonFields):
     category = models.CharField(max_length=255, blank=True, null=True, editable=True)
     subcategory = models.CharField(max_length=255, blank=True)
     name = models.CharField(max_length=255, unique=True, editable=True)
