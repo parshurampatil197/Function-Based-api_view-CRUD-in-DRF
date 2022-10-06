@@ -10,13 +10,13 @@ from django.shortcuts import get_object_or_404
 
 @api_view(['POST'])
 def add_items(request):
-    items = ItemSerializer(data=request.data)
+    serializer = ItemSerializer(data=request.data)
 
     if Items.objects.filter(**request.data).exists():
         raise serializers.ValidationError("Item already Exist!!")
 
-    if items.is_valid(raise_exception=True):
-        items.save()
+    if serializer.is_valid(raise_exception=True):
+        serializer.save()
         return Response(request.data)
     else:
         return Response(status=status.HTTP_404_NOT_FOUND)
