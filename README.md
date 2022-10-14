@@ -103,6 +103,14 @@ Test API by Using POSTMAN
   http://127.0.0.1:8000/v1/all/
 ```
 
+```http
+  http://127.0.0.1:8000/v1/all/?id=1
+```
+
+```http
+  http://127.0.0.1:8000/v1/all/?category=Electronics
+```
+
 #### Response
 
 ```http
@@ -114,6 +122,7 @@ Test API by Using POSTMAN
     
 }
 ```
+
 
 ## Authors
 
