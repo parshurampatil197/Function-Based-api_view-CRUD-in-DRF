@@ -16,12 +16,7 @@ Way to make Django CRUD Operations with PostgreSQL Database
 
 ## Requirements
 
-Last tested successfully with Python 3.6.13 and Ubuntu 16.04
-
-Create venv and pip install django to import the required modules.
-
-
-## Technologies used
+Last tested successfully with Python 3.6.19 and Ubuntu 16.04
 Django==2.2\
 djangorestframework==3.10.2\
 psycopg2==2.9.3
@@ -35,22 +30,21 @@ psycopg2==2.9.3
 
 1. Create a folder for your project on your local machine
 ```bash
-  mkdir Simple_Django_CRUD_api; 
-  cd Simple_Django_CRUD_api
+  mkdir myproject; 
+  cd myproject
 
 ```
 
 2. Create a virtual environment and install django
 
 ```bash
-  virtualenv --python=python3 Simple_Django_CRUD_api; 
-  source venv_Simple_Django_CRUD_api/bin/activate; 
+  virtualenv venv --python=python3 ; 
+  source venv/bin/activate; 
 
 ```
 
 Install the dependencies needed to run the app:
 ```bash
-  pip install Django==2.2
   pip install -r requirements. txt 
 
 ```
@@ -71,8 +65,6 @@ Install the dependencies needed to run the app:
 ```
 
 
-
-
 Run the project
 
 ```bash
@@ -91,7 +83,7 @@ Test API by Using POSTMAN
 #### Http request: POST 
 
 ```http
-  http://127.0.0.1:8000/api/create/
+  http://127.0.0.1:8000/v1/create/
 ```
 
 #### Request
@@ -108,7 +100,7 @@ Test API by Using POSTMAN
 #### Http request: GET 
 
 ```http
-  http://127.0.0.1:8000/api/all/
+  http://127.0.0.1:8000/v1/all/
 ```
 
 #### Response
