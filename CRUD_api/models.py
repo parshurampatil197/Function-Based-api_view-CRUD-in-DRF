@@ -1,8 +1,6 @@
 import uuid
-
 from django.db import models
 from .commen_models import CommonFields
-
 
 
 class Items(CommonFields):
@@ -13,4 +11,7 @@ class Items(CommonFields):
 
     def __str__(self):
         return self.name
+
+    class Meta:
+        db_table = 'Items'
 

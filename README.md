@@ -1,27 +1,20 @@
 
 
-## Simple_Django_CRUD_api
+## Simple_Django_CRUD_api using @api_view decorator
 
 ![gif](https://developers.giphy.com/branch/master/static/api-512d36c09662682717108a38bbb5c57d.gif)
 
 
 # Description
 
-I have created Python3/Django CRUD with PostgreSQL that uses Django Rest Framework for building Rest Apis. You’ll know:
+I have created Python3/Django CRUD with PostgreSQL that uses Django Rest Framework for building Rest 
+Apis. DRF allows us to work with regular function based views.
+I have implementd Django function based view for the Restful Web service. We also make use of the @api_view decorator.
 
-How to setup Django to connect with PostgreSQL Database\
-How to define Data Models and migrate it to PostgreSQL\
-Way to use Django Rest Framework to process HTTP requests\
-Way to make Django CRUD Operations with PostgreSQL Database
 
 ## Requirements
 
-Last tested successfully with Python 3.6.13 and Ubuntu 16.04
-
-Create venv and pip install django to import the required modules.
-
-
-## Technologies used
+Last tested successfully with Python 3.6.19 and Ubuntu 16.04
 Django==2.2\
 djangorestframework==3.10.2\
 psycopg2==2.9.3
@@ -35,22 +28,21 @@ psycopg2==2.9.3
 
 1. Create a folder for your project on your local machine
 ```bash
-  mkdir Simple_Django_CRUD_api; 
-  cd Simple_Django_CRUD_api
+  mkdir myproject; 
+  cd myproject
 
 ```
 
 2. Create a virtual environment and install django
 
 ```bash
-  virtualenv --python=python3 Simple_Django_CRUD_api; 
-  source venv_Simple_Django_CRUD_api/bin/activate; 
+  virtualenv venv --python=python3 ; 
+  source venv/bin/activate; 
 
 ```
 
 Install the dependencies needed to run the app:
 ```bash
-  pip install Django==2.2
   pip install -r requirements. txt 
 
 ```
@@ -71,8 +63,6 @@ Install the dependencies needed to run the app:
 ```
 
 
-
-
 Run the project
 
 ```bash
@@ -91,7 +81,7 @@ Test API by Using POSTMAN
 #### Http request: POST 
 
 ```http
-  http://127.0.0.1:8000/api/create/
+  http://127.0.0.1:8000/v1/create/
 ```
 
 #### Request
@@ -108,7 +98,15 @@ Test API by Using POSTMAN
 #### Http request: GET 
 
 ```http
-  http://127.0.0.1:8000/api/all/
+  http://127.0.0.1:8000/v1/all/
+```
+
+```http
+  http://127.0.0.1:8000/v1/all/?id=1
+```
+
+```http
+  http://127.0.0.1:8000/v1/all/?category=Electronics
 ```
 
 #### Response
@@ -123,8 +121,20 @@ Test API by Using POSTMAN
 }
 ```
 
+#### Http request: PUT 
+
+```http
+  http://127.0.0.1:8000/v1/update/2
+```
+
+#### Http request: DELETE 
+
+```http
+  http://127.0.0.1:8000/v1/delete/3
+```
+
+
 ## Authors
 
 - [@parshuram](https://github.com/parshurampatil197)
-
 
