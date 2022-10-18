@@ -1,16 +1,18 @@
 
 
-## Simple_Django_CRUD_api using @api_view decorator
+## Simple_Django_CRUD_api
 
 ![gif](https://developers.giphy.com/branch/master/static/api-512d36c09662682717108a38bbb5c57d.gif)
 
 
 # Description
 
-I have created Python3/Django CRUD with PostgreSQL that uses Django Rest Framework for building Rest 
-Apis. DRF allows us to work with regular function based views.
-I have implementd Django function based view for the Restful Web service. We also make use of the @api_view decorator.
+I have created Python3/Django CRUD with PostgreSQL that uses Django Rest Framework for building Rest Apis. You’ll know:
 
+How to setup Django to connect with PostgreSQL Database\
+How to define Data Models and migrate it to PostgreSQL\
+Way to use Django Rest Framework to process HTTP requests\
+Way to make Django CRUD Operations with PostgreSQL Database
 
 ## Requirements
 
@@ -121,20 +123,9 @@ Test API by Using POSTMAN
 }
 ```
 
-#### Http request: PUT 
-
-```http
-  http://127.0.0.1:8000/v1/update/2
-```
-
-#### Http request: DELETE 
-
-```http
-  http://127.0.0.1:8000/v1/delete/3
-```
-
 
 ## Authors
 
 - [@parshuram](https://github.com/parshurampatil197)
+
 
